@@ -1165,7 +1165,7 @@
 
     // Sorry page range cards
     const rangeGrid = document.querySelector('.range-grid');
-    if (rangeGrid) rangeGrid.innerHTML = p.related.map(rid => {
+    if (rangeGrid) rangeGrid.innerHTML = Object.keys(PRODUCT_META).filter(rid => rid !== id).map(rid => {
       const m = PRODUCT_META[rid]; if (!m) return '';
       return `<div class="range-card" onclick="location.href='${rid}.html'">
         <div class="range-card-img" style="background:${m.color};display:flex;align-items:center;justify-content:center">
