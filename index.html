@@ -9,12 +9,13 @@
 <title>Protein Shake</title>
 <style>
 
+  :root{--accent:#bf5220;--accent-rgb:191,82,32;--accent-bg:#fdf6ee;--accent-dark:#9e4419}
   *{box-sizing:border-box;margin:0;padding:0}
   button,select,input{font-family:'Inter',sans-serif;font-weight:400}
   body{font-family:'Inter',sans-serif;background:#f8f4ee;color:#0c0c0d;min-height:100vh;overflow-x:hidden}
   header{background:#fff;border-bottom:1px solid #e8e2d9;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:center}
   .logo{font-size:20px;font-weight:800;letter-spacing:-0.5px}
-  .logo span{color:#bf5220}
+  .logo span{color:var(--accent)}
 
   .product{width:100%;padding:0 0 60px;background:#f8f4ee}
   .pdp-body-desktop{display:block}
@@ -23,7 +24,7 @@
   /* NAV */
   .site-nav{background:#fff;height:48px;display:flex;align-items:center;justify-content:center;margin:0 -20px;border-bottom:1px solid rgba(0,0,0,0.08);position:sticky;top:0;z-index:100}
   .site-nav-logo{font-family:'Inter',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.5px;color:#0c0c0d}
-  .site-nav-logo span{color:#bf5220}
+  .site-nav-logo span{color:var(--accent)}
   .site-nav-product{font-family:'Inter',sans-serif;font-size:15px;font-weight:600;letter-spacing:-0.3px;color:#0c0c0d}
 
   .img-section{margin:0;position:relative}
@@ -41,7 +42,7 @@
   .new-badge .badge-label{font-size:10px;color:#0c0c0d;font-weight:600;letter-spacing:0.3px}
   .img-bottom-bar{height:24px;background:#f8f4ee;border-radius:24px 24px 0 0;margin-top:-24px;position:relative;z-index:1}
 
-  .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#bf5220;margin-bottom:8px}
+  .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);margin-bottom:8px}
   h1{font-size:26px;font-weight:800;line-height:1.2;margin-bottom:10px}
   .sub{font-size:15px;color:#6e6e6e;line-height:1.6;margin-bottom:16px}
 
@@ -58,18 +59,18 @@
   .v.active,.v:hover{border-color:#0c0c0d;background:#1a1a1a;color:#fff}
 
   .buy-btn{width:100%;background:#1a1a1a;color:#fff;border:none;padding:16px;border-radius:12px;font-size:17px;font-weight:800;cursor:pointer;transition:background .15s;margin-bottom:10px}
-  .buy-btn:hover{background:#bf5220}
+  .buy-btn:hover{background:var(--accent)}
   .note{text-align:center;font-size:12px;color:#9a9a9a;margin-bottom:32px}
 
 
   /* DESCRIPTION SECTION */
   .pdp-stars-row{display:flex;align-items:center;gap:8px;margin-bottom:16px}
-  .pdp-stars-text{font-size:20px;color:#bf5220;letter-spacing:2px;line-height:1}
+  .pdp-stars-text{font-size:20px;color:var(--accent);letter-spacing:2px;line-height:1}
   .pdp-customers{font-size:12px;font-weight:500;color:#1a100a}
   .pdp-title{font-size:30px;font-weight:500;line-height:1.12;letter-spacing:-0.6px;color:#0c0c0d;margin-bottom:4px}
   .pdp-subtitle{font-size:18px;color:#6e6e6e;line-height:1.4;margin-bottom:16px}
   .pdp-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
-  .badge-green{background:#fdf6ee;border:1px solid rgba(191,82,32,0.3);color:#bf5220;font-size:14px;padding:4px 6px;border-radius:4px;white-space:nowrap}
+  .badge-green{background:var(--accent-bg);border:1px solid rgba(var(--accent-rgb),0.3);color:var(--accent);font-size:14px;padding:4px 6px;border-radius:4px;white-space:nowrap}
   .badge-green strong{font-weight:500}
   .badge-grey{border:1px solid rgba(0,0,0,0.15);color:#6e6e6e;font-size:14px;padding:4px 6px;border-radius:4px;white-space:nowrap}
   .pdp-body{font-size:16px;color:#5c4a3a;line-height:1.4}
@@ -77,7 +78,7 @@
   .pdp-divider-line{display:none}
   .pdp-flavour-card{margin:16px 0;background:transparent;border:1px solid rgba(0,0,0,0.12);border-radius:12px;overflow:hidden}
   .flavour-selected{display:flex;align-items:center;gap:4px;padding:8px 20px;height:68px;cursor:pointer;flex-shrink:0;transition:background .15s}
-  .flavour-selected:hover{background:#fdf6ee}
+  .flavour-selected:hover{background:var(--accent-bg)}
   .flavour-left{display:flex;align-items:center;gap:8px;flex:1}
   .flavour-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background-size:cover;background-position:center;position:relative;overflow:hidden}
   .flavour-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -93,7 +94,7 @@
   .flavour-fade{position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(to bottom,transparent,#f8f4ee);pointer-events:none;transition:opacity .2s ease}
   .flavour-scroll-wrap.at-bottom .flavour-fade{opacity:0}
   .flavour-option-item{display:flex;align-items:center;gap:4px;padding:8px 20px;height:68px;cursor:pointer;transition:background .15s}
-  .flavour-option-item:hover{background:#fdf6ee}
+  .flavour-option-item:hover{background:var(--accent-bg)}
   .flavour-option-item:active{background:#f8f4ee}
   .flavour-option-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;background-size:cover;background-position:center}
   .flavour-option-info{flex:1;display:flex;flex-direction:column;gap:2px;padding:2px 0}
@@ -113,8 +114,8 @@
   .section-heading{font-family:'Inter',sans-serif;font-size:24px;font-weight:500;color:#0c0c0d;line-height:1.2;letter-spacing:-0.48px;margin:-16px 0 16px}
 
   /* BENEFITS */
-  .benefits-section{display:flex;flex-direction:column;gap:24px;padding:48px 20px;background:rgba(191,82,32,0.07)}
-  .benefits-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:#bf5220;line-height:1}
+  .benefits-section{display:flex;flex-direction:column;gap:24px;padding:48px 20px;background:rgba(var(--accent-rgb),0.07)}
+  .benefits-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:var(--accent);line-height:1}
   .benefits-grid{display:flex;flex-direction:column;gap:24px;width:100%}
   .benefits-row{display:flex;gap:24px;width:100%}
   .benefit-item{display:flex;gap:12px;align-items:center;flex:1;min-width:0}
@@ -125,10 +126,10 @@
 
   /* NUTRITION */
   .nutrition-section{display:flex;flex-direction:column;gap:24px;padding:48px 20px;background:transparent}
-  .nutrition-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:#bf5220;line-height:1}
+  .nutrition-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:var(--accent);line-height:1}
   .nutrition-table{border:1px solid rgba(208,197,174,0.31);border-radius:8px;overflow:hidden;display:flex;width:100%}
   .nt-col-left{flex:1;min-width:0}
-  .nt-col-right{flex:1;min-width:0;background:rgba(191,82,32,0.07);border-left:1px solid rgba(191,82,32,0.12)}
+  .nt-col-right{flex:1;min-width:0;background:rgba(var(--accent-rgb),0.07);border-left:1px solid rgba(var(--accent-rgb),0.12)}
   .nt-cell{height:37px;display:flex;align-items:center;padding:0 8px;border-bottom:1px solid rgba(208,197,174,0.31);font-family:'Inter',sans-serif;font-size:14px;font-weight:400;color:#0c0c0d}
   .nt-cell.hd{height:34px;font-size:12px;font-weight:500}
   .nt-cell.bold{font-weight:500}
@@ -137,8 +138,8 @@
 
   /* REVIEWS */
   /* REVIEWS (carousel) */
-  .reviews-section{display:flex;flex-direction:column;gap:24px;padding:48px 20px 56px;background:rgba(191,82,32,0.07)}
-  .reviews-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:#bf5220;line-height:1}
+  .reviews-section{display:flex;flex-direction:column;gap:24px;padding:48px 20px 56px;background:rgba(var(--accent-rgb),0.07)}
+  .reviews-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:var(--accent);line-height:1}
   .rc-viewport{overflow:hidden;width:100%}
   .rc-carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .rc-carousel::-webkit-scrollbar{display:none}
@@ -147,7 +148,7 @@
   .rc-card.beige{background:#f8f4ee}
   .rc-review{display:flex;flex-direction:column;gap:12px}
   .rc-stars{width:107px;height:20px;object-fit:contain;display:block}
-  .rc-stars-text{font-size:16px;color:#bf5220;letter-spacing:2px;line-height:1}
+  .rc-stars-text{font-size:16px;color:var(--accent);letter-spacing:2px;line-height:1}
   .rc-stars-clip{width:86px;height:20px;overflow:hidden;flex-shrink:0}
   .rc-title{font-family:'Inter',sans-serif;font-size:16px;font-weight:500;color:#0c0c0d;line-height:1.4}
   .rc-body{font-family:'Inter',sans-serif;font-size:16px;font-weight:400;color:#5c4a3a;line-height:1.4;margin:0}
@@ -177,11 +178,11 @@
   .sorry-card p{font-family:'Inter',sans-serif;font-size:15px;color:#5c4a3a;line-height:1.6;margin:0 0 24px}
   .email-row{display:flex;gap:8px}
   .email-row input{flex:1;padding:14px 16px;border:1.5px solid #e0dbd2;border-radius:12px;font-size:14px;outline:none;font-family:'Inter',sans-serif;background:#fff;color:#0c0c0d;min-width:0}
-  .email-row input:focus{border-color:#bf5220}
+  .email-row input:focus{border-color:var(--accent)}
   .email-row input::placeholder{color:#9a9a9a}
-  .email-row button{background:#bf5220;color:#fff;border:none;padding:14px 20px;border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif}
-  .email-row button:hover{background:#9e4419}
-  .success{background:#fdf6ee;color:#7a4010;border-radius:10px;padding:14px;font-size:14px;font-weight:500;display:none;margin-top:12px;text-align:center;font-family:'Inter',sans-serif}
+  .email-row button{background:var(--accent);color:#fff;border:none;padding:14px 20px;border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif}
+  .email-row button:hover{background:var(--accent-dark)}
+  .success{background:var(--accent-bg);color:#7a4010;border-radius:10px;padding:14px;font-size:14px;font-weight:500;display:none;margin-top:12px;text-align:center;font-family:'Inter',sans-serif}
   .range-heading{font-family:'Inter',sans-serif;font-size:18px;font-weight:500;color:#0c0c0d;margin:0 0 4px;letter-spacing:-0.3px}
   .range-sub{font-family:'Inter',sans-serif;font-size:14px;color:#5c4a3a;margin:0 0 16px}
   .range-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -190,7 +191,7 @@
   .range-card-img{background:#e8e2d8;height:130px;overflow:hidden}
   .range-card-img img{width:100%;height:100%;object-fit:cover;display:block}
   .range-card-info{padding:12px}
-  .range-cat{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:#bf5220;margin-bottom:4px}
+  .range-cat{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;color:var(--accent);margin-bottom:4px}
   .range-name{font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#0c0c0d;margin-bottom:4px;line-height:1.3}
   .range-price{font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#0c0c0d;margin-bottom:6px}
   .range-rating{display:flex;align-items:center;gap:4px;font-family:'Inter',sans-serif;font-size:12px;color:#6e6e6e}
@@ -274,7 +275,7 @@
       gap:8px;
       margin-bottom:16px;
     }
-    .dsk-stars-text{font-size:20px;color:#bf5220;letter-spacing:2px;line-height:1}
+    .dsk-stars-text{font-size:20px;color:var(--accent);letter-spacing:2px;line-height:1}
     .dsk-customers{font-size:12px;font-weight:500;color:#1a100a}
 
     /* Desktop title */
@@ -370,16 +371,16 @@
       border-radius:8px;
       transition:background-color .15s cubic-bezier(.4,0,.2,1);
     }
-    .dsk-accordion-btn:hover{background-color:#fdf6ee}
+    .dsk-accordion-btn:hover{background-color:var(--accent-bg)}
     .dsk-accordion-label{
       font-size:12px;
       font-weight:500;
       text-transform:uppercase;
       letter-spacing:0.96px;
-      color:#bf5220;
+      color:var(--accent);
       line-height:1;
     }
-    .dsk-accordion-icon{display:flex;align-items:center;justify-content:center;width:24px;height:24px;flex-shrink:0}.dsk-accordion-icon .icon-plus{width:14px;height:14px;display:block;stroke:#bf5220;stroke-width:2}.dsk-accordion-icon .icon-minus{display:none;width:14px;height:14px;stroke:#bf5220;stroke-width:2}
+    .dsk-accordion-icon{display:flex;align-items:center;justify-content:center;width:24px;height:24px;flex-shrink:0}.dsk-accordion-icon .icon-plus{width:14px;height:14px;display:block;stroke:var(--accent);stroke-width:2}.dsk-accordion-icon .icon-minus{display:none;width:14px;height:14px;stroke:var(--accent);stroke-width:2}
     .dsk-accordion-body{
       overflow:hidden;
       max-height:0;
@@ -536,11 +537,11 @@
       <!-- Perks row -->
       <div class="dsk-perks">
         <div class="dsk-perk">
-          <i data-lucide="truck" class="dsk-perk-icon" style="width:16px;height:16px;stroke:#bf5220;stroke-width:1.5;fill:none;flex-shrink:0"></i>
+          <i data-lucide="truck" class="dsk-perk-icon" style="width:16px;height:16px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0"></i>
           Free shipping on orders over £45
         </div>
         <div class="dsk-perk">
-          <i data-lucide="shield-check" class="dsk-perk-icon" style="width:16px;height:16px;stroke:#bf5220;stroke-width:1.5;fill:none;flex-shrink:0"></i>
+          <i data-lucide="shield-check" class="dsk-perk-icon" style="width:16px;height:16px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0"></i>
           30-Day Money Back Guarantee
         </div>
       </div>
@@ -720,11 +721,11 @@
     <button class="pdp-buy-btn" onclick="showSorry()">Buy now</button>
     <div class="pdp-perks">
       <div class="pdp-perk">
-        <i data-lucide="truck" class="pdp-perk-icon" style="width:16px;height:16px;stroke:#bf5220;stroke-width:1.5;fill:none;flex-shrink:0"></i>
+        <i data-lucide="truck" class="pdp-perk-icon" style="width:16px;height:16px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0"></i>
         Free shipping on orders over £45
       </div>
       <div class="pdp-perk">
-        <i data-lucide="shield-check" class="pdp-perk-icon" style="width:16px;height:16px;stroke:#bf5220;stroke-width:1.5;fill:none;flex-shrink:0"></i>
+        <i data-lucide="shield-check" class="pdp-perk-icon" style="width:16px;height:16px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0"></i>
         30-Day Money Back Guarantee
       </div>
     </div>
@@ -1002,6 +1003,7 @@
   // ── Product data ──────────────────────────────────────────────
   const PRODUCTS = {
     choc: {
+      accent:'#6B3A1F', accentRgb:'107,58,31', accentBg:'#fdf5f0', accentDark:'#4e2a15',
       pageTitle:'Chocolate Protein Shake', title:'Chocolate Protein Shake',
       subtitle:'20g protein and 26 vitamins in a can', ratingText:'4.7 out of 5 · 892 reviews',
       description:'Most protein shakes force a trade-off — taste or nutrition, convenience or quality. gives you 20g plant protein, zero sugar and 26 vitamins in a can. No blender. No compromise.',
@@ -1018,6 +1020,7 @@
       ],
     },
     smooth: {
+      accent:'#C55A0A', accentRgb:'197,90,10', accentBg:'#fef5ec', accentDark:'#9c4708',
       pageTitle:'Smooth Protein Smoothie', title:'Smooth',
       subtitle:'20g protein and 27 vitamins in a squeeze pouch', ratingText:'4.6 out of 5 · 634 reviews',
       description:"You're trying to eat well but real life happens between meals. Smooth is 20g protein and 27 vitamins in a 130g squeeze pouch — built for the moment when you need it most.",
@@ -1034,6 +1037,7 @@
       ],
     },
     nightshift: {
+      accent:'#5B3F9A', accentRgb:'91,63,154', accentBg:'#f3f0f9', accentDark:'#432e73',
       pageTitle:'Night Shift', title:'Night Shift',
       subtitle:'Overnight recovery protein powder', ratingText:'4.8 out of 5 · 312 reviews',
       description:"Night Shift delivers 25g slow-release protein, magnesium and L-theanine 60–90 minutes before sleep — so the 7–9 hours you're already committed to are finally working for you.",
@@ -1050,6 +1054,7 @@
       ],
     },
     gummies: {
+      accent:'#2A6B2A', accentRgb:'42,107,42', accentBg:'#f0f7f0', accentDark:'#1e4f1e',
       pageTitle:'Daily Gummies Adults', title:'Daily Gummies',
       subtitle:'26 vitamins and super greens', ratingText:'4.8 out of 5 · 1,247 reviews',
       description:"Most people know they're not getting everything they need from food alone. Five gummies a day fills the gaps — 26 vitamins, minerals and super greens, without the effort.",
@@ -1066,6 +1071,7 @@
       ],
     },
     kgummies: {
+      accent:'#B8860A', accentRgb:'184,134,10', accentBg:'#fdf8ec', accentDark:'#8a6408',
       pageTitle:'Daily Gummies Kids', title:'Daily Gummies KIDS',
       subtitle:'25 vitamins and super greens for kids aged 4+', ratingText:'4.9 out of 5 · 834 reviews',
       description:"Getting kids to eat well is a daily battle. Five H-shaped gummies gives them the 25 vitamins, minerals and super greens their growing bodies need — in the only format they'll actually eat without a fight.",
@@ -1082,6 +1088,7 @@
       ],
     },
     crunch: {
+      accent:'#8B5E2A', accentRgb:'139,94,42', accentBg:'#fdf7f0', accentDark:'#6a4720',
       pageTitle:'Crunch Drinkable Cereal', title:'Crunch — Drinkable Cereal',
       subtitle:'Drinkable cereal in a spouted pouch', ratingText:'4.9 out of 5 · 156 reviews',
       description:"Cereal needs a bowl. That's the problem. Crunch fixes the format — rice crispies and freeze-dried fruit in a spouted pouch, dry until you're ready. Add milk, shake, drink. 20g protein, no bowl required.",
@@ -1098,6 +1105,7 @@
       ],
     },
     oats: {
+      accent:'#5C7A3A', accentRgb:'92,122,58', accentBg:'#f3f7ee', accentDark:'#435a2b',
       pageTitle:'Overnight Oats', title:'Overnight Oats',
       subtitle:'25g protein and 26 vitamins in a chilled oat pot', ratingText:'4.7 out of 5 · 203 reviews',
       description:'Overnight Oats is the only refrigerated oat pot with 25g protein and 26 vitamins — cold-soaked, ready when you are. Grab it. Eat it. Done.',
@@ -1114,6 +1122,7 @@
       ],
     },
     pro: {
+      accent:'#5A2D8A', accentRgb:'90,45,138', accentBg:'#f4f0f9', accentDark:'#421f67',
       pageTitle:'PRO Powder', title:'PRO Powder',
       subtitle:'28 scientifically-dosed ingredients in a daily powder', ratingText:'4.8 out of 5 · 428 reviews',
       description:'Most supplement stacks dose for the label, not the science. PRO Powder doses for the science. 28 ingredients. One scoop. The shelf-clearing daily stack for people who need to perform without compromise.',
@@ -1151,6 +1160,13 @@
     document.title = p.pageTitle;
     const navName = document.getElementById('nav-product-name');
     if(navName) navName.textContent = p.title;
+
+    // Apply per-product colour theme
+    const root = document.documentElement;
+    root.style.setProperty('--accent', p.accent);
+    root.style.setProperty('--accent-rgb', p.accentRgb);
+    root.style.setProperty('--accent-bg', p.accentBg);
+    root.style.setProperty('--accent-dark', p.accentDark);
 
     // Desktop
     const qs = (s,el) => { const n=el||document; const r=n.querySelector(s); if(r) return r; };
@@ -1203,7 +1219,7 @@
       const iconBox = item.querySelector('.benefit-icon-box');
       const titleEl = item.querySelector('.benefit-title');
       const subEl = item.querySelector('.benefit-supporting');
-      if(iconBox) iconBox.innerHTML = `<i data-lucide="${b[2]}" style="width:24px;height:24px;stroke:#bf5220;stroke-width:1.5;fill:none"></i>`;
+      if(iconBox) iconBox.innerHTML = `<i data-lucide="${b[2]}" style="width:24px;height:24px;stroke:var(--accent);stroke-width:1.5;fill:none"></i>`;
       if(titleEl) titleEl.textContent = b[0];
       if(subEl) subEl.textContent = b[1];
     });
