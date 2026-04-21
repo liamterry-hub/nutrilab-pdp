@@ -1003,7 +1003,7 @@
   // ── Product data ──────────────────────────────────────────────
   const PRODUCTS = {
     choc: {
-      accent:'#6B3A1F', accentRgb:'107,58,31', accentBg:'#fdf5f0', accentDark:'#4e2a15',
+      accent:'#6B3A1F', accentRgb:'107,58,31', accentBg:'#fdf5f0', accentDark:'#4e2a15', img:'img-choc.png',
       pageTitle:'Chocolate Protein Shake', title:'Chocolate Protein Shake',
       subtitle:'20g protein and 26 vitamins in a can', ratingText:'4.7 out of 5 · 892 reviews',
       description:'Most protein shakes force a trade-off — taste or nutrition, convenience or quality. gives you 20g plant protein, zero sugar and 26 vitamins in a can. No blender. No compromise.',
@@ -1020,7 +1020,7 @@
       ],
     },
     smooth: {
-      accent:'#C55A0A', accentRgb:'197,90,10', accentBg:'#fef5ec', accentDark:'#9c4708',
+      accent:'#C55A0A', accentRgb:'197,90,10', accentBg:'#fef5ec', accentDark:'#9c4708', img:'img-smooth.png',
       pageTitle:'Smooth Protein Smoothie', title:'Smooth',
       subtitle:'20g protein and 27 vitamins in a squeeze pouch', ratingText:'4.6 out of 5 · 634 reviews',
       description:"You're trying to eat well but real life happens between meals. Smooth is 20g protein and 27 vitamins in a 130g squeeze pouch — built for the moment when you need it most.",
@@ -1037,7 +1037,7 @@
       ],
     },
     nightshift: {
-      accent:'#5B3F9A', accentRgb:'91,63,154', accentBg:'#f3f0f9', accentDark:'#432e73',
+      accent:'#5B3F9A', accentRgb:'91,63,154', accentBg:'#f3f0f9', accentDark:'#432e73', img:'img-nightshift.png',
       pageTitle:'Night Shift', title:'Night Shift',
       subtitle:'Overnight recovery protein powder', ratingText:'4.8 out of 5 · 312 reviews',
       description:"Night Shift delivers 25g slow-release protein, magnesium and L-theanine 60–90 minutes before sleep — so the 7–9 hours you're already committed to are finally working for you.",
@@ -1054,7 +1054,7 @@
       ],
     },
     gummies: {
-      accent:'#2A6B2A', accentRgb:'42,107,42', accentBg:'#f0f7f0', accentDark:'#1e4f1e',
+      accent:'#2A6B2A', accentRgb:'42,107,42', accentBg:'#f0f7f0', accentDark:'#1e4f1e', img:'img-gummies.png',
       pageTitle:'Daily Gummies Adults', title:'Daily Gummies',
       subtitle:'26 vitamins and super greens', ratingText:'4.8 out of 5 · 1,247 reviews',
       description:"Most people know they're not getting everything they need from food alone. Five gummies a day fills the gaps — 26 vitamins, minerals and super greens, without the effort.",
@@ -1071,7 +1071,7 @@
       ],
     },
     kgummies: {
-      accent:'#B8860A', accentRgb:'184,134,10', accentBg:'#fdf8ec', accentDark:'#8a6408',
+      accent:'#B8860A', accentRgb:'184,134,10', accentBg:'#fdf8ec', accentDark:'#8a6408', img:'img-kgummies.png',
       pageTitle:'Daily Gummies Kids', title:'Daily Gummies KIDS',
       subtitle:'25 vitamins and super greens for kids aged 4+', ratingText:'4.9 out of 5 · 834 reviews',
       description:"Getting kids to eat well is a daily battle. Five H-shaped gummies gives them the 25 vitamins, minerals and super greens their growing bodies need — in the only format they'll actually eat without a fight.",
@@ -1088,7 +1088,7 @@
       ],
     },
     crunch: {
-      accent:'#8B5E2A', accentRgb:'139,94,42', accentBg:'#fdf7f0', accentDark:'#6a4720',
+      accent:'#8B5E2A', accentRgb:'139,94,42', accentBg:'#fdf7f0', accentDark:'#6a4720', img:'img-crunch.png',
       pageTitle:'Crunch Drinkable Cereal', title:'Crunch — Drinkable Cereal',
       subtitle:'Drinkable cereal in a spouted pouch', ratingText:'4.9 out of 5 · 156 reviews',
       description:"Cereal needs a bowl. That's the problem. Crunch fixes the format — rice crispies and freeze-dried fruit in a spouted pouch, dry until you're ready. Add milk, shake, drink. 20g protein, no bowl required.",
@@ -1105,7 +1105,7 @@
       ],
     },
     oats: {
-      accent:'#5C7A3A', accentRgb:'92,122,58', accentBg:'#f3f7ee', accentDark:'#435a2b',
+      accent:'#5C7A3A', accentRgb:'92,122,58', accentBg:'#f3f7ee', accentDark:'#435a2b', img:'img-oats.png',
       pageTitle:'Overnight Oats', title:'Overnight Oats',
       subtitle:'25g protein and 26 vitamins in a chilled oat pot', ratingText:'4.7 out of 5 · 203 reviews',
       description:'Overnight Oats is the only refrigerated oat pot with 25g protein and 26 vitamins — cold-soaked, ready when you are. Grab it. Eat it. Done.',
@@ -1122,7 +1122,7 @@
       ],
     },
     pro: {
-      accent:'#5A2D8A', accentRgb:'90,45,138', accentBg:'#f4f0f9', accentDark:'#421f67',
+      accent:'#5A2D8A', accentRgb:'90,45,138', accentBg:'#f4f0f9', accentDark:'#421f67', img:'img-pro.png',
       pageTitle:'PRO Powder', title:'PRO Powder',
       subtitle:'28 scientifically-dosed ingredients in a daily powder', ratingText:'4.8 out of 5 · 428 reviews',
       description:'Most supplement stacks dose for the label, not the science. PRO Powder doses for the science. 28 ingredients. One scoop. The shelf-clearing daily stack for people who need to perform without compromise.',
@@ -1182,13 +1182,9 @@
     set('.pdp-title', p.title); set('.pdp-subtitle', p.subtitle); set('.pdp-body', p.description); set('.pdp-customers', p.ratingText);
     setHTML('.pdp-badges', badgesHTML);
 
-    // Slide placeholders
+    // Slide image
     const slidesEl = document.getElementById('slides');
-    if (slidesEl) slidesEl.innerHTML = [0,1,2].map(i =>
-      `<div style="flex:0 0 100%;min-width:100%;height:100%;background:${p.slideColor};filter:brightness(${[1,1.2,0.8][i]});display:flex;align-items:center;justify-content:center;padding:20px">
-        ${i===0?`<span style="color:rgba(255,255,255,0.3);font-size:13px;font-weight:600;text-align:center">${p.title}</span>`:''}
-      </div>`
-    ).join('');
+    if (slidesEl) slidesEl.innerHTML = `<div style="flex:0 0 100%;min-width:100%;height:100%;background:${p.slideColor}"><img src="${p.img}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block"></div>`;
 
     // Flavour data
     hydrationFlavours = p.flavours;
