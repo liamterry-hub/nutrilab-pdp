@@ -68,10 +68,10 @@
   .pdp-customers{font-size:12px;font-weight:500;color:#1a100a}
   .pdp-title{font-size:30px;font-weight:500;line-height:1.12;letter-spacing:-0.6px;color:#0c0c0d;margin-bottom:4px}
   .pdp-subtitle{font-size:18px;color:#6e6e6e;line-height:1.4;margin-bottom:16px}
-  .pdp-badges{display:flex;gap:8px;align-items:center;margin-bottom:16px}
-  .badge-green{background:#fdf6ee;border:1px solid rgba(191,82,32,0.3);color:#bf5220;font-size:14px;padding:4px 6px;border-radius:4px}
+  .pdp-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+  .badge-green{background:#fdf6ee;border:1px solid rgba(191,82,32,0.3);color:#bf5220;font-size:14px;padding:4px 6px;border-radius:4px;white-space:nowrap}
   .badge-green strong{font-weight:500}
-  .badge-grey{border:1px solid rgba(0,0,0,0.15);color:#6e6e6e;font-size:14px;padding:4px 6px;border-radius:4px}
+  .badge-grey{border:1px solid rgba(0,0,0,0.15);color:#6e6e6e;font-size:14px;padding:4px 6px;border-radius:4px;white-space:nowrap}
   .pdp-body{font-size:16px;color:#5c4a3a;line-height:1.4}
   .pdp-content-card{background:#f8f4ee;border-radius:20px 20px 0 0;padding:24px 20px 0;margin-top:-20px;position:relative}
   .pdp-divider-line{display:none}
@@ -296,6 +296,7 @@
     /* Desktop badges / price pills */
     .dsk-badges{
       display:flex;
+      flex-wrap:wrap;
       gap:8px;
       align-items:center;
       margin-bottom:16px;
